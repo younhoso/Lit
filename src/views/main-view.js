@@ -24,15 +24,17 @@ export class SimpleGreeting extends LitElement {
     this.todos = initValue.todos;
     this.name = initValue.name;
     this.number = initValue.number;
-    this.task = initValue.task;
+    this.task = '';
   }
 
   addTodo(){
     if(this.task){
       this.todos = [...this.todos, {
-        task: this.task
+        task: this.task,
+        complete: false
       }]
       this.task = '';
+      console.log(this.task)
     };
   }
 
@@ -43,7 +45,7 @@ export class SimpleGreeting extends LitElement {
   render() {
     return html`
       <section class="html">
-        <input type="text" value="${this.task}" @change="${this.updateTask}" />
+        <input type="text" .value="${this.task}" @change="${this.updateTask}" />
         <div class="test" @click="${this.addTodo}">
           <p>Hellossdsd, ${this.name}!, ${this.number}</p>
         </div>
