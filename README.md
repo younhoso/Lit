@@ -1,3 +1,3 @@
 # Lit
 lit-webpack5-setting\
-Todo list 작업\
+Todo list 작업
