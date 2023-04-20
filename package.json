@@ -1,8 +1,8 @@
 {
-  "name": "webpack5-lit-setting",
+  "name": "lit",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:younhoso/webpack5-lit-setting.git",
+  "repository": "git@github.com:younhoso/lit.git",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.js --progress",
@@ -19,6 +19,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.1.0",
+    "core-js": "^3.10.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.2.1",
     "cross-env": "^7.0.2",
@@ -39,7 +40,6 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
-    "lit": "^2.7.2",
-    "core-js": "^3.10.0"
+    "lit": "^2.7.2"
   }
 }

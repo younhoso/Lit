@@ -8,7 +8,10 @@ const initValue = {
 }
 
 export class SimpleGreeting extends LitElement {
-  static styles = css`p { color: red }`;
+  static styles = css`
+    p { color: red }
+    button {color:#fff; border: none; background-color: #333; padding:7px; border-radius:1rem;}
+  `;
   
   static get properties() {
     return {
@@ -45,9 +48,10 @@ export class SimpleGreeting extends LitElement {
   render() {
     return html`
       <section class="html">
+        <p>${this.name}!, ${this.number}</p>
         <input type="text" .value="${this.task}" @change="${this.updateTask}" />
         <div class="test" @click="${this.addTodo}">
-          <p>Hellossdsd, ${this.name}!, ${this.number}</p>
+          <button>추가 버튼</button>
         </div>
         <div class="todos-list">
           ${this.todos.map((todo, idx) => html`
